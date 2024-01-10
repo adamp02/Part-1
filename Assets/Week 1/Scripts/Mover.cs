@@ -7,6 +7,9 @@ public class Mover : MonoBehaviour
 
     public float speed = 3f;
 
+    public GameObject missilePrefab;
+
+    public Transform spawnPoint;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +24,12 @@ public class Mover : MonoBehaviour
         float direction = Input.GetAxis("Horizontal");
         
         transform.Translate(speed * direction * Time.deltaTime, 0, 0);
+
+        if (Input.GetKeyDown(KeyCode.Space))
+
+        {
+            Instantiate(missilePrefab, spawnPoint.position, transform.rotation);
+        }
         
 
      
