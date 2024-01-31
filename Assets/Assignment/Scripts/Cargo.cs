@@ -16,6 +16,7 @@ public class Cargo : MonoBehaviour
     void Update()
     {
         
+        // Destroy object if it flies off screen
         if (rigidbody.position.y > 10) {
             Destroy(this.gameObject);
         }
@@ -25,6 +26,7 @@ public class Cargo : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Flip the gravity to activate the "magnet"
         rigidbody.gravityScale = -1;
     }
 }
