@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2842706249843251773}
   - component: {fileID: 1953032774297156988}
   - component: {fileID: 6337122222826250919}
+  - component: {fileID: 3866177669629328797}
   m_Layer: 0
   m_Name: Cargo
   m_TagString: Untagged
@@ -148,3 +149,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3866177669629328797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5505628982492132960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 072826378a7271845a177cdeb11778a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

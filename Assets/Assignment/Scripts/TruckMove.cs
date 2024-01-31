@@ -5,25 +5,24 @@ using UnityEngine;
 public class TruckMove : MonoBehaviour
 {
 
-    Rigidbody2D rigidbody;
+    Rigidbody2D truckRB;
     public float speed = 3f;
     float steering;
     public float steeringSpeed = 30;
 
+
     // Start is called before the first frame update
     void Start()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
+        truckRB = gameObject.GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
 
-        float direction = Input.GetAxis("Horizontal");
 
-        transform.Translate(speed * direction * Time.deltaTime, 0, 0);
 
-       // steering = Input.GetAxis("Horizontal");
+       steering = Input.GetAxis("Vertical");
 
 
 
@@ -31,7 +30,11 @@ public class TruckMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //rigidbody.AddTorque(steering * -steeringSpeed * Time.deltaTime);
+        truckRB.AddTorque(steering * -steeringSpeed * Time.deltaTime);
+
+        float direction = Input.GetAxis("Horizontal");
+
+        transform.Translate(speed * direction * Time.deltaTime, 0, 0);
 
     }
 
